@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Righteous&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background:#33d9b2;
+            font-size: 12px;
+        }
+        body, button, input {
+            font-family: 'Righteous', cursive;
+            font-weight: 700;
+            letter-spacing: 1.4px;
+        }
+
+        .container{
+            width: 100%;
+            height: 100vh;
+            background-color:#33d9b2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .main{
+            width: 500px;
+            height: 500px;
+            background: #3e3e3e;
+            /* text-align: center; */
+            display: grid;
+            grid-template-columns: 30% auto ;
+            /* grid-template-rows: 70% 70% 50% ; */
+            border-top-right-radius: 20px;
+            border-top-left-radius: 20px;
+            border-bottom-left-radius: 20px;
+            border-bottom-right-radius: 20px;
+        }
+        .student{
+            /* background-color: yellow; */
+            color: white;
+            font-size:24px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .grade{
+            /* background-color: tomato; */
+            text-align: center;
+            /* padding-top: 50px; */
+            border: none;
+            outline: none;
+            background-color: none;
+            
+        }
+        input[type=text]{
+            width: 260px;
+            margin-top: 40px;
+            padding: 5px;
+            border: none;
+            outline: none;
+            background: none;
+            border-color: none;
+            border-bottom: 2px solid green;
+            text-transform: uppercase;
+            /* text-align: center; */
+            color: #fff;
+
+        }
+        .shoe{
+            /* width: 332%; */
+            display: flex;
+            justify-content: center;
+            /* background-color: teal; */
+        }
+        input[type=button]{
+            border: none;
+            padding: 5px;
+            outline: none;
+            background: none;
+            color: green;
+            cursor: pointer;
+        }
+        input[type=button]:hover{
+            color: white;
+            transition: 2s;
+        }
+        #data_show{
+            color: #ffff;
+            /* font-size: 20px; */
+
+
+        }
+
+        @media only screen and (max-width: 768px) {
+            .container{
+                width: 100vw;
+                height: 100vh;
+            }
+            .main{
+                display: grid   ;
+                grid-template-columns: auto auto;
+                /* justify-items: flex-start; */
+                align-items: center;
+                flex-wrap: wrap;
+                display: block;
+                height: 600px;
+            }
+            .student{
+                display: flex;
+                justify-content: center;
+            }
+            .shoe{
+                display: grid;
+                place-items: center;
+                font-size: small;
+                text-align: center;
+            }
+            /* .grade{
+                display: block;
+            }
+            .shoe{
+                position: relative;
+            }
+            .shoe p{
+                left: 0;
+            }
+              */
+        }
+        @media only screen and (min-width: 768px) {
+            .shoe{
+                width: 332%;
+            }
+        }
+ 
+            
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="main">
+            <div class="student">
+                <div class="animated infinite pulse">
+                    Student <br> Grade <br> Calcy
+                    <hr style="border-bottom: 3px solid green;" >
+                  </div>
+                  
+            </div>
+            <div class="grade">
+                <div>
+                    <input type="text" placeholder="Web Programming"   id="wb" required="required">
+                </div>
+                <div>
+                    <input type="text" placeholder="Math" required  id="math">
+                </div>
+                <div>
+                    <input type="text" placeholder="Physics"  required id="phy">
+                </div>
+                <div>
+                    <input type="text" placeholder="English" required  id="eng">
+                </div>
+                <div>
+                    <input type="text" placeholder="Javascript" required  id="javascript">
+                </div>
+                <br><br>
+                <div>
+                    <input type="button" value="showPercentage" onclick="calculate()">
+                </div>
+            </div>
+            
+
+            <div class="shoe" >
+                <p id="data_show"></p>
+            </div>
+
+            
+        </div>
+        
+    </div>
+
+
+
+    <script src="./app.js"></script>
+    
+</body>
+</html>
